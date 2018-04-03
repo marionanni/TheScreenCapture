@@ -111,18 +111,17 @@ public class MainActivity extends AppCompatActivity {
                     PERMISSION_CODE);
             return;
         }
-//        virtualDisplay = createVirtualDisplay();
-//        recorder.start();
+        virtualDisplay = createVirtualDisplay();
+        recorder.start();
     }
 
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        virtualDisplay = createVirtualDisplay();
-        recorder.start();
-
         projection = projectionManager.getMediaProjection(resultCode, data);
         projection.registerCallback(projectionCallback, null);
+        virtualDisplay = createVirtualDisplay();
+        recorder.start();
         setStatusMessage("start pressed");
     }
 
