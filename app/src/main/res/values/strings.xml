@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">The Screen Capture</string>
+    <string name="status_txt">Status</string>
+    <string name="start_btn">Start</string>
+    <string name="stop_btn">Stop</string>
+    <string name="play_btn">Play</string>
+</resources>
